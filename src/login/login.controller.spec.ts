@@ -1,18 +1,22 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { LoginController } from './login.controller';
+import { LoginService } from './login.service';
 
 describe('LoginController', () => {
-  let controller: LoginController;
+  let _LoginController: LoginController;
 
   beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
+    const app: TestingModule = await Test.createTestingModule({
       controllers: [LoginController],
+      providers: [LoginService]
     }).compile();
 
-    controller = module.get<LoginController>(LoginController);
+    _LoginController = app.get<LoginController>(LoginController);
   });
 
   it('should be defined', () => {
-    expect(controller).toBeDefined();
+    expect(_LoginController).toBeDefined();
   });
+
+
 });
