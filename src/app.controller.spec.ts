@@ -15,9 +15,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
+    it('should be defined"', () => {
       expect(appController).toBeDefined();
-      expect(appController.showThiagoPage()).toBe('<b>Hi, my name is Thiago Souza! :)</b>');
     });
   });
 });

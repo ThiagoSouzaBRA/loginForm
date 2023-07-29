@@ -8,7 +8,6 @@ export class AppController{
   @Get('/')
   @Render('pages/index')
   showPage() {
-    return {titulo: 'Principal', nome: 'Thiago PC Test'};
   }
 
 }
